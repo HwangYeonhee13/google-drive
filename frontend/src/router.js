@@ -13,8 +13,8 @@ import VideoManager from "./components/listers/VideoCards"
 import VideoDetail from "./components/listers/VideoDetail"
 
 
-import FileManager from "./components/listers/FileCards"
-import FileDetail from "./components/listers/FileDetail"
+import IndexManager from "./components/listers/IndexCards"
+import IndexDetail from "./components/listers/IndexDetail"
 
 
 export default new Router({
@@ -46,14 +46,14 @@ export default new Router({
 
 
             {
-                path: '/files',
-                name: 'FileManager',
-                component: FileManager
+                path: '/indices',
+                name: 'IndexManager',
+                component: IndexManager
             },
             {
-                path: '/files/:id',
-                name: 'FileDetail',
-                component: FileDetail
+                path: '/indices/:id',
+                name: 'IndexDetail',
+                component: IndexDetail
             },
 
 

@@ -1,20 +1,70 @@
 package googledrive.domain;
 
-import googledrive.domain.*;
-import googledrive.infra.AbstractEvent;
-import java.util.*;
-import lombok.*;
+import googledrive.domain.Indexed;
+import googledrive.IndexerApplication;
+import javax.persistence.*;
+import java.util.List;
+import lombok.Data;
+import java.util.Date;
 
+@Entity
+@Table(name="Index_table")
 @Data
-@ToString
-public class Index extends AbstractEvent {
 
+public class Index  {
+
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
+    
+    
+    
+    
     private Long id;
 
-    public Index(File aggregate){
-        super(aggregate);
+    @PostPersist
+    public void onPostPersist(){
+
+
+        Indexed indexed = new Indexed(this);
+        indexed.publishAfterCommit();
+
     }
-    public Index(){
-        super();
+
+    public static IndexRepository repository(){
+        IndexRepository indexRepository = IndexerApplication.applicationContext.getBean(IndexRepository.class);
+        return indexRepository;
     }
+
+
+
+
+    public static void makeIndex(FileUploaded fileUploaded){
+
+        /** Example 1:  new item 
+        Index index = new Index();
+        repository().save(index);
+
+        Indexed indexed = new Indexed(index);
+        indexed.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(fileUploaded.get???()).ifPresent(index->{
+            
+            index // do something
+            repository().save(index);
+
+            Indexed indexed = new Indexed(index);
+            indexed.publishAfterCommit();
+
+         });
+        */
+
+        
+    }
+
+
 }

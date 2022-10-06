@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.transaction.Transactional;
 
 @RestController
-// @RequestMapping(value="/files")
+// @RequestMapping(value="/indices")
 @Transactional
-public class FileController {
+public class IndexController {
     @Autowired
-    FileRepository fileRepository;
+    IndexRepository indexRepository;
 
 
 

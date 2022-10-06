@@ -7,17 +7,14 @@ import lombok.*;
 
 @Data
 @ToString
-public class FileUploaded extends AbstractEvent {
+public class Indexed extends AbstractEvent {
 
     private Long id;
-    private String name;
-    private String type;
-    private String size;
 
-    public FileUploaded(File aggregate){
+    public Indexed(Index aggregate){
         super(aggregate);
     }
-    public FileUploaded(){
+    public Indexed(){
         super();
     }
 }

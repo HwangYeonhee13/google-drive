@@ -67,13 +67,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="files"
-                        to="/files"
+                        key="indices"
+                        to="/indices"
                         @click="changeUrl()"
                         color="deep-purple lighten-2"
                         style="font-weight:700;"
                     >
-                        File
+                        Index
                     </v-list-item>
 
 
@@ -170,13 +170,13 @@
                                     class="mx-auto"
                                     outlined
                                     rounded
-                                    key="files"
-                                    to="/files"
+                                    key="indices"
+                                    to="/indices"
                                     @click="changeUrl()"
                                     color="deep-purple lighten-2"
                                     style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
                                 >
-                                    File
+                                    Index
                                 </v-btn>
                             </v-card-actions>
                         </v-card>

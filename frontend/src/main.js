@@ -50,7 +50,7 @@ pluralCaseList.push( {plural: "files", pascal: "File"} )
 pluralCaseList.push( {plural: "videos", pascal: "Video"} )
 
 
-pluralCaseList.push( {plural: "files", pascal: "File"} )
+pluralCaseList.push( {plural: "indices", pascal: "Index"} )
 
 
 Vue.prototype.$ManagerLists.forEach(function(item, idx) {

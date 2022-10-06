@@ -27,7 +27,7 @@ spring:
         - id: indexer
           uri: http://localhost:8085
           predicates:
-            - Path=/files/**, 
+            - Path=/indices/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -70,7 +70,7 @@ spring:
         - id: indexer
           uri: http://indexer:8080
           predicates:
-            - Path=/files/**, 
+            - Path=/indices/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

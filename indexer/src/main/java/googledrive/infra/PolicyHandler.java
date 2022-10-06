@@ -18,7 +18,7 @@ import googledrive.domain.*;
 @Service
 @Transactional
 public class PolicyHandler{
-    @Autowired FileRepository fileRepository;
+    @Autowired IndexRepository indexRepository;
     
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
@@ -33,7 +33,7 @@ public class PolicyHandler{
         
 
         // Sample Logic //
-        File.makeIndex(event);
+        Index.makeIndex(event);
         
 
         

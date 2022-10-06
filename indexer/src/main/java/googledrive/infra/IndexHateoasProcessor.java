@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.hateoas.EntityModel;
 
 @Component
-public class FileHateoasProcessor implements RepresentationModelProcessor<EntityModel<File>>  {
+public class IndexHateoasProcessor implements RepresentationModelProcessor<EntityModel<Index>>  {
 
     @Override
-    public EntityModel<File> process(EntityModel<File> model) {
+    public EntityModel<Index> process(EntityModel<Index> model) {
 
         
         return model;
