@@ -5,6 +5,12 @@
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <String label="VideoUrl" v-model="item.videoUrl" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="FileId" v-model="item.fileId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>
