@@ -68,6 +68,8 @@
             me.values = temp.data._embedded.files;
             
             me.newValue = {
+                'name': '',
+                'type': '',
             }
         },
         methods:{

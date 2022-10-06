@@ -17,6 +17,8 @@
         </v-card-title >
 
         <v-card-text>
+            <String label="Name" v-model="value.name" :editMode="editMode"/>
+            <String label="Type" v-model="value.type" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
